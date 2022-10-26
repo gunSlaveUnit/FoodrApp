@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tablesListFragment">
+
+    <fragment
+        android:id="@+id/tablesListFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.TablesListFragment"
+        android:label="Foodrapp Столики"
+        tools:layout="@layout/fragment_tables_list" >
+        <action
+            android:id="@+id/action_tablesListFragment_to_newBookingFragment2"
+            app:destination="@id/newBookingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clientReservationsFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.ClientReservationsFragment"
+        android:label="Foodrapp Брони"
+        tools:layout="@layout/fragment_client_reservations" />
+
+    <fragment
+        android:id="@+id/newBookingFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.NewBookingFragment"
+        android:label="fragment_new_booking"
+        tools:layout="@layout/fragment_new_booking" >
+        <action
+            android:id="@+id/action_newBookingFragment_to_tablesListFragment2"
+            app:destination="@id/tablesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.FoodListFragment"
+        android:label="Foodrapp Еда"
+        tools:layout="@layout/fragment_food_list" />
+</navigation>
