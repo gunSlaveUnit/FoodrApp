@@ -3,10 +3,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
 import com.github.gunslaveunit.foodrapp.models.Table
 import com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TableItemViewHolder
+import com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TablesListFragmentDirections
 
 class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
     private var tableList = emptyList<Table>()
@@ -26,6 +29,11 @@ class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
         holder.itemView.findViewById<TextView>(R.id.description).text = item.description
         holder.itemView.findViewById<TextView>(R.id.capacity).text = item.capacity.toString()
         holder.itemView.findViewById<ImageView>(R.id.photo).setImageResource(R.color.purple_500)
+
+        holder.itemView.findViewById<ConstraintLayout>(R.id.table_list_item).setOnClickListener {
+            val action = TablesListFragmentDirections.actionTablesListFragmentToNewBookingFragment(item)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
