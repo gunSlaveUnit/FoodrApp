@@ -11,7 +11,7 @@
         android:label="Foodrapp Столики"
         tools:layout="@layout/fragment_tables_list" >
         <action
-            android:id="@+id/action_tablesListFragment_to_newBookingFragment2"
+            android:id="@+id/action_tablesListFragment_to_newBookingFragment"
             app:destination="@id/newBookingFragment" />
     </fragment>
 
@@ -24,11 +24,14 @@
     <fragment
         android:id="@+id/newBookingFragment"
         android:name="com.github.gunslaveunit.foodrapp.views.fragments.NewBookingFragment"
-        android:label="fragment_new_booking"
+        android:label="Бронирование"
         tools:layout="@layout/fragment_new_booking" >
         <action
-            android:id="@+id/action_newBookingFragment_to_tablesListFragment2"
+            android:id="@+id/action_newBookingFragment_to_tablesListFragment"
             app:destination="@id/tablesListFragment" />
+        <argument
+            android:name="table"
+            app:argType="com.github.gunslaveunit.foodrapp.models.Table" />
     </fragment>
     <fragment
         android:id="@+id/foodListFragment"
