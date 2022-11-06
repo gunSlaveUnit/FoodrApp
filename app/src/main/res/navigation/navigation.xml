@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/tablesListFragment"
-        android:name="com.github.gunslaveunit.foodrapp.views.fragments.TablesListFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TablesListFragment"
         android:label="Foodrapp Столики"
         tools:layout="@layout/fragment_tables_list" >
         <action
