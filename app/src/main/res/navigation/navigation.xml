@@ -24,7 +24,7 @@
     <fragment
         android:id="@+id/newBookingFragment"
         android:name="com.github.gunslaveunit.foodrapp.views.fragments.NewBookingFragment"
-        android:label="Бронирование"
+        android:label="Foodrapp Бронирование"
         tools:layout="@layout/fragment_new_booking" >
         <action
             android:id="@+id/action_newBookingFragment_to_tablesListFragment"
