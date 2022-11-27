@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
-import com.github.gunslaveunit.foodrapp.data.models.Table
 import com.github.gunslaveunit.foodrapp.data.viewmodels.TableViewModel
 
 class TablesListFragment : Fragment() {
@@ -30,7 +29,7 @@ class TablesListFragment : Fragment() {
         tablesListView.adapter = adapter
         tablesListView.layoutManager = LinearLayoutManager(requireContext())
 
-        tableViewModel.getAll.observe(viewLifecycleOwner, Observer { tables ->
+        tableViewModel.all.observe(viewLifecycleOwner, Observer { tables ->
             adapter.setData(tables)
         })
 

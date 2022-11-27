@@ -5,7 +5,7 @@ import com.github.gunslaveunit.foodrapp.data.daos.TableDao
 import com.github.gunslaveunit.foodrapp.data.models.Table
 
 class TableRepository(private val tableDao: TableDao) {
-    val getAll: LiveData<List<Table>> = tableDao.getAll()
+    val all: LiveData<List<Table>> = tableDao.all()
 
     suspend fun add(doctor: Table) {
         tableDao.add(doctor)

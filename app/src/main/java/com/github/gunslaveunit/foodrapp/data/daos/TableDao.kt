@@ -9,7 +9,7 @@ import com.github.gunslaveunit.foodrapp.data.models.Table
 @Dao
 interface TableDao {
     @Query("SELECT * FROM tables")
-    fun getAll(): LiveData<List<Table>>
+    fun all(): LiveData<List<Table>>
 
     @Insert()
     suspend fun add(doctor: Table)

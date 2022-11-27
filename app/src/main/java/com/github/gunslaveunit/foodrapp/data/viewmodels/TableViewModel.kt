@@ -12,12 +12,12 @@ import kotlinx.coroutines.launch
 
 class TableViewModel(application: Application): AndroidViewModel(application) {
     private val tableRepository: TableRepository
-    val getAll: LiveData<List<Table>>
+    val all: LiveData<List<Table>>
 
     init {
         val tableDao = FoodrAppDB.getDatabase(application).tableDao()
         tableRepository = TableRepository(tableDao)
-        getAll = tableRepository.getAll
+        all = tableRepository.all
     }
 
     fun add(table: Table) {
