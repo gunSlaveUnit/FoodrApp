@@ -29,7 +29,7 @@ class TablesListFragment : Fragment() {
         tablesListView.adapter = adapter
         tablesListView.layoutManager = LinearLayoutManager(requireContext())
 
-        tableViewModel.all.observe(viewLifecycleOwner, Observer { tables ->
+        tableViewModel.all().observe(viewLifecycleOwner, Observer { tables ->
             adapter.setData(tables)
         })
 
