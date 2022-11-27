@@ -2,7 +2,6 @@ package com.github.gunslaveunit.foodrapp.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Date
 
 @Entity(tableName="bookings")
 data class Booking (
@@ -11,6 +10,6 @@ data class Booking (
     val table: Int,
     val guestName: String,
     val contactPhone: String,
-    val startTime: Date,
-    val endTime: Date
+    val startTime: String,
+    val endTime: String
 )
