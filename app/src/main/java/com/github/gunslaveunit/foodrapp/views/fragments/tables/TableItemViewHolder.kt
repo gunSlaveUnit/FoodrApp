@@ -1,4 +1,4 @@
-package com.github.gunslaveunit.foodrapp.views.fragments.tables_list
+package com.github.gunslaveunit.foodrapp.views.fragments.tables
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

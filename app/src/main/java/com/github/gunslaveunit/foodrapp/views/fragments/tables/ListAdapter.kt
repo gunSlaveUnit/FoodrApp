@@ -8,8 +8,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
 import com.github.gunslaveunit.foodrapp.data.models.Table
-import com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TableItemViewHolder
-import com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TablesListFragmentDirections
+import com.github.gunslaveunit.foodrapp.views.fragments.tables.TableItemViewHolder
+import com.github.gunslaveunit.foodrapp.views.fragments.tables.TablesListFragmentDirections
 
 class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
     private var tableList = emptyList<Table>()
