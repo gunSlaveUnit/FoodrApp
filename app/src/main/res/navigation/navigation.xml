@@ -31,7 +31,7 @@
             app:destination="@id/tablesListFragment" />
         <argument
             android:name="table"
-            app:argType="com.github.gunslaveunit.foodrapp.models.Table" />
+            app:argType="com.github.gunslaveunit.foodrapp.data.models.Table" />
     </fragment>
     <fragment
         android:id="@+id/foodListFragment"

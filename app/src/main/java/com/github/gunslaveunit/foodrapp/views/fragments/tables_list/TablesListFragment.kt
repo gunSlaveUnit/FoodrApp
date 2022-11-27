@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
-import com.github.gunslaveunit.foodrapp.models.Table
+import com.github.gunslaveunit.foodrapp.data.models.Table
 
 class TablesListFragment : Fragment() {
     override fun onCreateView(

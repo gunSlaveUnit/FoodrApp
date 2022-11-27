@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
-import com.github.gunslaveunit.foodrapp.models.Table
+import com.github.gunslaveunit.foodrapp.data.models.Table
 import com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TableItemViewHolder
 import com.github.gunslaveunit.foodrapp.views.fragments.tables_list.TablesListFragmentDirections
 
