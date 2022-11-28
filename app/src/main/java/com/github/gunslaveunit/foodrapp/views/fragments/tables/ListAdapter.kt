@@ -28,7 +28,7 @@ class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
         holder.itemView.findViewById<TextView>(R.id.number).text = item.number.toString()
         holder.itemView.findViewById<TextView>(R.id.description).text = item.description
         holder.itemView.findViewById<TextView>(R.id.capacity).text = item.capacity.toString()
-        holder.itemView.findViewById<ImageView>(R.id.photo).setImageResource(R.color.purple_500)
+        holder.itemView.findViewById<ImageView>(R.id.photo).setImageBitmap(item.image)
 
         holder.itemView.findViewById<ConstraintLayout>(R.id.table_list_item).setOnClickListener {
             val action = TablesListFragmentDirections.actionTablesListFragmentToNewBookingFragment(item)
