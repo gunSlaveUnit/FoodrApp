@@ -1,5 +1,6 @@
 package com.github.gunslaveunit.foodrapp.data.models
 
+import android.graphics.Bitmap
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -12,5 +13,6 @@ data class Table(
     val id: Int,
     val number: Int,
     val description: String,
-    val capacity: Int
+    val capacity: Int,
+    val image: Bitmap
 ): Parcelable
