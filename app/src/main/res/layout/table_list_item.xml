@@ -3,9 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/table_list_item"
-    android:layout_margin="8sp"
     android:layout_width="match_parent"
+    android:background="@drawable/round_card"
+    android:layout_marginRight="16sp"
+    android:layout_marginLeft="16sp"
+    android:layout_marginTop="16sp"
     android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/photoCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="16dp"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            app:layout_constraintCircleRadius="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/number"
@@ -13,35 +35,23 @@
         android:layout_height="wrap_content"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/description"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/photoCard" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Открытый, у окна"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/capacity"
-        app:layout_constraintTop_toBottomOf="@+id/number" />
+        app:layout_constraintTop_toBottomOf="@+id/capacity" />
 
     <TextView
         android:id="@+id/capacity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
-
-    <ImageView
-        android:id="@+id/photo"
-        android:layout_width="0sp"
-        android:layout_height="80sp"
-        android:layout_marginStart="8sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/description"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/photoCard" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
