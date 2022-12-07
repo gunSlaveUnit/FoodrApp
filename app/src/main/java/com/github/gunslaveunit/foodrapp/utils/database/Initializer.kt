@@ -11,7 +11,7 @@ class Initializer {
             0, 1, "On the street", 2,
             BitmapFactory
                 .decodeStream(
-                    URL("https://i.pinimg.com/originals/1f/e1/80/1fe180aadeab797bab635bd0df79fffa.jpg")
+                    URL("https://static.gdebar.ru/data/app/bar/img/gallery/2168/41467.jpg")
                         .openStream()
                 )
         )
