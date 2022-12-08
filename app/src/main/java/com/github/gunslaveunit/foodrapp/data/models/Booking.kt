@@ -11,6 +11,6 @@ data class Booking (
     val tableId: Int,
     val guestName: String,
     val contactPhone: String,
-    val startTime: Date,
-    val endTime: Date
+    val startTime: String,
+    val endTime: String
 )

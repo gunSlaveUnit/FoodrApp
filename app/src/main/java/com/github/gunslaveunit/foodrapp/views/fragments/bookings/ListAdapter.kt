@@ -25,8 +25,8 @@ class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
 
         holder.itemView.findViewById<TextView>(R.id.tableNumber).text = item.tableId.toString()
         holder.itemView.findViewById<TextView>(R.id.clientName).text = item.guestName
-        holder.itemView.findViewById<TextView>(R.id.bookingStartTime).text = item.startTime.toString()
-        holder.itemView.findViewById<TextView>(R.id.bookingEndTime).text = item.endTime.toString()
+        holder.itemView.findViewById<TextView>(R.id.bookingStartTime).text = item.startTime
+        holder.itemView.findViewById<TextView>(R.id.bookingEndTime).text = item.endTime
         holder.itemView.findViewById<TextView>(R.id.phone).text = item.contactPhone
     }
 
