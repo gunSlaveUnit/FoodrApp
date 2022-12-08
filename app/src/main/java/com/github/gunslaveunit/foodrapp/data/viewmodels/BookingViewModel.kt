@@ -34,4 +34,8 @@ class BookingViewModel(application: Application): AndroidViewModel(application) 
     fun add(booking: Booking) {
         bookingRepository.add(booking)
     }
+
+    fun delete(booking: Booking) {
+        bookingRepository.delete(booking)
+    }
 }

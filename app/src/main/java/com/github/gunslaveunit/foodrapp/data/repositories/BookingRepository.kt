@@ -9,4 +9,8 @@ class BookingRepository(private val bookingDao: BookingDao) {
     fun add(booking: Booking) {
         bookingDao.add(booking)
     }
+
+    fun delete(booking: Booking) {
+        bookingDao.delete(booking)
+    }
 }

@@ -1,6 +1,7 @@
 package com.github.gunslaveunit.foodrapp.data.daos
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.github.gunslaveunit.foodrapp.data.models.Booking
@@ -12,4 +13,7 @@ interface BookingDao {
 
     @Insert
     fun add(booking: Booking)
+
+    @Delete
+    fun delete(booking: Booking)
 }
