@@ -31,6 +31,10 @@ class NewBookingFragment : Fragment() {
             findNavController().navigate(R.id.action_newBookingFragment_to_tablesListFragment)
         }
 
+        view.findViewById<Button>(R.id.new_booking_confirm_button).setOnClickListener{
+            findNavController().navigate(R.id.action_newBookingFragment_to_tablesListFragment)
+        }
+
         view.findViewById<TextView>(R.id.new_booking_table_number).text = args.table.number.toString()
 
         view.findViewById<Button>(R.id.new_booking_confirm_button).setOnClickListener {
