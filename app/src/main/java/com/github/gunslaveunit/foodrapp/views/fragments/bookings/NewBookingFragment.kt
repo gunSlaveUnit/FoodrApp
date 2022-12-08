@@ -1,4 +1,4 @@
-package com.github.gunslaveunit.foodrapp.views.fragments
+package com.github.gunslaveunit.foodrapp.views.fragments.bookings
 
 import android.os.Bundle
 import android.util.Log

@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/newBookingFragment"
-        android:name="com.github.gunslaveunit.foodrapp.views.fragments.NewBookingFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.bookings.NewBookingFragment"
         android:label="Foodrapp Бронирование"
         tools:layout="@layout/fragment_new_booking" >
         <argument
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/foodListFragment"
-        android:name="com.github.gunslaveunit.foodrapp.views.fragments.FoodListFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.dishes.FoodListFragment"
         android:label="Foodrapp Еда"
         tools:layout="@layout/fragment_food_list" />
 </navigation>
