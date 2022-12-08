@@ -11,6 +11,7 @@
         android:id="@+id/bookingLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="25sp"
         android:text="Бронь: стол #"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +20,9 @@
         android:id="@+id/new_booking_table_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="номер"
+        android:textColor="@color/mainYellow"
+        android:textSize="25sp"
+        android:text="1"
         app:layout_constraintStart_toEndOf="@+id/bookingLabel"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,6 +30,7 @@
         android:id="@+id/enter_booking_info_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="Введите информацию о бронировании"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bookingLabel" />
@@ -37,6 +41,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_text_view"
         android:ems="12"
+        android:textSize="20sp"
         android:hint="На кого бронировать"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +54,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_text_view"
         android:ems="12"
+        android:textSize="20sp"
         android:hint="Для связи с Вами"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +65,10 @@
         android:id="@+id/enter_booking_date_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30sp"
         android:text="Дата"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/new_booking_date"
         app:layout_constraintTop_toBottomOf="@+id/new_booking_client_phone" />
 
     <EditText
@@ -69,6 +77,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_text_view"
         android:ems="12"
+        android:textSize="20sp"
         android:hint="Например, 15.11.2022"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,6 +90,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_text_view"
         android:ems="12"
+        android:textSize="20sp"
         android:hint="Например, 15:30"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +103,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_text_view"
         android:textColor="@color/white"
+        android:textSize="20sp"
         android:ems="12"
         android:hint="Например, 15:60"
         android:inputType="time"
@@ -105,18 +116,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/mainYellow"
+        android:textSize="20sp"
         android:text="Подтвердить"
         android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/cancel_new_booking_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="16sp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/cancel_new_booking_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        app:cornerRadius="16sp"
         android:text="Назад"
         app:backgroundTint="#CD4A4C"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,31 +142,39 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30sp"
         android:text="Имя"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/new_booking_client_name"
         app:layout_constraintTop_toBottomOf="@+id/enter_booking_info_label" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30sp"
         android:text="Телефон"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/new_booking_client_phone"
         app:layout_constraintTop_toBottomOf="@+id/new_booking_client_name" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="С"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30sp"
+        app:layout_constraintStart_toStartOf="@id/new_booking_time_start"
         app:layout_constraintTop_toBottomOf="@+id/new_booking_date" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="До"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30sp"
+        app:layout_constraintStart_toStartOf="@id/new_booking_time_end"
         app:layout_constraintTop_toBottomOf="@+id/new_booking_time_start" />
 </androidx.constraintlayout.widget.ConstraintLayout>
