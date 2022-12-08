@@ -26,12 +26,12 @@
         android:name="com.github.gunslaveunit.foodrapp.views.fragments.NewBookingFragment"
         android:label="Foodrapp Бронирование"
         tools:layout="@layout/fragment_new_booking" >
-        <action
-            android:id="@+id/action_newBookingFragment_to_tablesListFragment"
-            app:destination="@id/tablesListFragment" />
         <argument
             android:name="table"
             app:argType="com.github.gunslaveunit.foodrapp.data.models.Table" />
+        <action
+            android:id="@+id/action_newBookingFragment_to_tablesListFragment"
+            app:destination="@id/tablesListFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodListFragment"
