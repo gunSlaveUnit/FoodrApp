@@ -9,18 +9,18 @@ import com.github.gunslaveunit.foodrapp.R
 import com.github.gunslaveunit.foodrapp.data.models.Booking
 import com.github.gunslaveunit.foodrapp.views.fragments.tables.TableItemViewHolder
 
-class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
+class ListAdapter : RecyclerView.Adapter<BookingItemViewHolder>() {
     private var bookingsList = emptyList<Booking>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TableItemViewHolder {
-        return TableItemViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookingItemViewHolder {
+        return BookingItemViewHolder(
             LayoutInflater
                 .from(parent.context)
                 .inflate(R.layout.booking_client_list_item, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: TableItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: BookingItemViewHolder, position: Int) {
         val item = bookingsList[position]
 
         holder.itemView.findViewById<TextView>(R.id.tableNumber).text = item.tableId.toString()

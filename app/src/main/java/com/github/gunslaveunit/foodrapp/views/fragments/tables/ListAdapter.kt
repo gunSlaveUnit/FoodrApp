@@ -1,3 +1,5 @@
+package com.github.gunslaveunit.foodrapp.views.fragments.tables
+
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,8 +10,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
 import com.github.gunslaveunit.foodrapp.data.models.Table
-import com.github.gunslaveunit.foodrapp.views.fragments.tables.TableItemViewHolder
-import com.github.gunslaveunit.foodrapp.views.fragments.tables.TablesListFragmentDirections
 
 class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
     private var tableList = emptyList<Table>()

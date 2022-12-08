@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class BookingViewModel(application: Application): AndroidViewModel(application) {
     private val bookingRepository: BookingRepository
-    private val all: LiveData<List<Booking>>
+    private val all: List<Booking>
     private val bookingService: BookingService
 
     init {
@@ -23,19 +23,15 @@ class BookingViewModel(application: Application): AndroidViewModel(application) 
         bookingService = BookingService(bookingRepository)
     }
 
-    fun all(): LiveData<List<Booking>> {
+    fun all(): List<Booking> {
         return all
     }
 
     fun make(booking: Booking) {
-        viewModelScope.launch(Dispatchers.IO) {
-            bookingService.make(booking)
-        }
+        bookingService.make(booking)
     }
 
     fun add(booking: Booking) {
-        viewModelScope.launch(Dispatchers.IO) {
-            bookingRepository.add(booking)
-        }
+        bookingRepository.add(booking)
     }
 }

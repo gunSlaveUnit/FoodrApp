@@ -29,6 +29,7 @@ abstract class FoodrAppDB : RoomDatabase() {
                         FoodrAppDB::class.java,
                         "foodrappdb"
                     )
+                    .allowMainThreadQueries()
                     .build()
 
                 INSTANCE = instance

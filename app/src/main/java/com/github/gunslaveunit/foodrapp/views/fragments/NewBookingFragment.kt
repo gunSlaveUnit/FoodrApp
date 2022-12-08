@@ -54,6 +54,8 @@ class NewBookingFragment : Fragment() {
 
         val booking = Booking(0, args.table.number, guestName, guestPhone, startDateTime, endDateTime)
 
-        bookingViewModel.add(booking)
+        Log.d("Boo", guestPhone)
+
+        bookingViewModel.make(booking)
     }
 }

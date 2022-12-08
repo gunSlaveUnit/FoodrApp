@@ -13,6 +13,12 @@ import com.github.gunslaveunit.foodrapp.data.viewmodels.BookingViewModel
 
 class ClientReservationsFragment : Fragment() {
     private lateinit var bookingViewModel: BookingViewModel
+    private val adapter = ListAdapter()
+
+    override fun onStart() {
+        super.onStart()
+        refreshData()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,15 +28,15 @@ class ClientReservationsFragment : Fragment() {
 
         bookingViewModel = ViewModelProvider(this)[BookingViewModel::class.java]
 
-        val adapter = ListAdapter()
         val bookingsListView = view.findViewById<RecyclerView>(R.id.bookingsList)
         bookingsListView.adapter = adapter
         bookingsListView.layoutManager = LinearLayoutManager(requireContext())
 
-        bookingViewModel.all().observe(viewLifecycleOwner) { bookings ->
-            adapter.setData(bookings)
-        }
-
         return view
+    }
+
+    private fun refreshData() {
+        val bookings = bookingViewModel.all()
+        adapter.setData(bookings)
     }
 }
