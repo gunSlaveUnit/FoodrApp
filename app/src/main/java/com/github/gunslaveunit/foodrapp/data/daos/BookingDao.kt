@@ -13,4 +13,7 @@ interface BookingDao {
 
     @Insert()
     suspend fun add(booking: Booking)
+
+    @Query("SELECT * FROM bookings WHERE :bookingTable = guestName")
+    fun cross(bookingTable: Int): LiveData<List<Booking>>
 }
