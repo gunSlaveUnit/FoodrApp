@@ -3,16 +3,11 @@ package com.github.gunslaveunit.foodrapp.views.fragments.bookings
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.gunslaveunit.foodrapp.R
 import com.github.gunslaveunit.foodrapp.data.models.Booking
-import com.github.gunslaveunit.foodrapp.data.models.Table
 import com.github.gunslaveunit.foodrapp.views.fragments.tables.TableItemViewHolder
-import com.github.gunslaveunit.foodrapp.views.fragments.tables.TablesListFragmentDirections
 
 class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
     private var bookingsList = emptyList<Booking>()
@@ -28,10 +23,10 @@ class ListAdapter : RecyclerView.Adapter<TableItemViewHolder>() {
     override fun onBindViewHolder(holder: TableItemViewHolder, position: Int) {
         val item = bookingsList[position]
 
-        holder.itemView.findViewById<TextView>(R.id.tableNumber).text = item.table.toString()
+        holder.itemView.findViewById<TextView>(R.id.tableNumber).text = item.tableId.toString()
         holder.itemView.findViewById<TextView>(R.id.clientName).text = item.guestName
-        holder.itemView.findViewById<TextView>(R.id.bookingStartTime).text = item.startTime
-        holder.itemView.findViewById<TextView>(R.id.bookingEndTime).text = item.endTime
+        holder.itemView.findViewById<TextView>(R.id.bookingStartTime).text = item.startTime.toString()
+        holder.itemView.findViewById<TextView>(R.id.bookingEndTime).text = item.endTime.toString()
         holder.itemView.findViewById<TextView>(R.id.phone).text = item.contactPhone
     }
 
