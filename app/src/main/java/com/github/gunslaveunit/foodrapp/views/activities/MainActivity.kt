@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.tablesListFragment,
                 R.id.clientReservationsFragment,
                 R.id.foodListFragment,
-                R.id.newBookingFragment
+                R.id.newBookingFragment,
+                R.id.detailedDishFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
