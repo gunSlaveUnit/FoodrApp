@@ -37,5 +37,21 @@
         android:id="@+id/foodListFragment"
         android:name="com.github.gunslaveunit.foodrapp.views.fragments.dishes.FoodListFragment"
         android:label="Foodrapp Еда"
-        tools:layout="@layout/fragment_food_list" />
+        tools:layout="@layout/fragment_food_list" >
+        <action
+            android:id="@+id/action_foodListFragment_to_detailedDishFragment"
+            app:destination="@id/detailedDishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedDishFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.dishes.DetailedDishFragment"
+        android:label="Foodrapp Блюдо"
+        tools:layout="@layout/fragment_detailed_dish" >
+        <action
+            android:id="@+id/action_detailedDishFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+        <argument
+            android:name="dish"
+            app:argType="com.github.gunslaveunit.foodrapp.data.models.Dish" />
+    </fragment>
 </navigation>
