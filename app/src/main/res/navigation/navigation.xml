@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tablesListFragment">
+
+    <fragment
+        android:id="@+id/tablesListFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.tables.TablesListFragment"
+        android:label="Foodrapp Столики"
+        tools:layout="@layout/fragment_tables_list" >
+        <action
+            android:id="@+id/action_tablesListFragment_to_newBookingFragment"
+            app:destination="@id/newBookingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clientReservationsFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.bookings.ClientReservationsFragment"
+        android:label="Foodrapp Брони"
+        tools:layout="@layout/fragment_client_reservations" />
+
+    <fragment
+        android:id="@+id/newBookingFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.bookings.NewBookingFragment"
+        android:label="Foodrapp Бронирование"
+        tools:layout="@layout/fragment_new_booking" >
+        <argument
+            android:name="table"
+            app:argType="com.github.gunslaveunit.foodrapp.data.models.Table" />
+        <action
+            android:id="@+id/action_newBookingFragment_to_tablesListFragment"
+            app:destination="@id/tablesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.dishes.FoodListFragment"
+        android:label="Foodrapp Еда"
+        tools:layout="@layout/fragment_food_list" >
+        <action
+            android:id="@+id/action_foodListFragment_to_detailedDishFragment"
+            app:destination="@id/detailedDishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedDishFragment"
+        android:name="com.github.gunslaveunit.foodrapp.views.fragments.dishes.DetailedDishFragment"
+        android:label="Foodrapp Блюдо"
+        tools:layout="@layout/fragment_detailed_dish" >
+        <action
+            android:id="@+id/action_detailedDishFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+        <argument
+            android:name="dish"
+            app:argType="com.github.gunslaveunit.foodrapp.data.models.Dish" />
+    </fragment>
+</navigation>
